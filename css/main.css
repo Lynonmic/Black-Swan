@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Sirin+Stencil", "Times New Roman", Times, serif;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+:root {
+  transition: all 0.5s ease-in-out smooth;
+}
+.navbar {
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  width: 100%;
+  height: 100%;
+}
+.navbar_header{
+    position: fixed;
+    transform: translateX(-100%);
+    z-index: 5;
+    background-color: beige;
+}
+.navbar_links {
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+}
+.navbar_link .menu_links {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar_link .menu_link a {
+  color: transparent;
+}
+.navbar_link:hover .menu_links {
+  display: block;
+  position: initial;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  transition: var(smooth);
+}
+.navbar_link:hover .menu_link a {
+  position: relative;
+  display: flex;
+  color: black;
+  background-color: beige;
+}
+.navbar_link:hover .menu_link a:hover {
+  border: 1px solid yellowgreen;
+  border-radius: 20px;
+  justify-content: center;
+}
+.navbar_link > .menu_links {
+  background-color: transparent;
+  text-align: left;
+  -webkit-transform: translateY(-400%);
+  -moz-transform: translateY(-400%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.navbar_link:hover .menu_links {
+  opacity: 1;
+  -webkit-transform: translateY(-0px) translateX(0px);
+  -moz-transform: translateY(0px) translateX(0px);
+  transform: translateY(0px) translateX(0px);
+  -webkit-transition: all 0.5 ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.navbar_link {
+  display: block;
+  padding: 15px;
+  border-radius: 20px;
+}
+.navbar_link {
+  border: 1px solid yellowgreen;
+}
+.navbar_link a {
+  text-decoration: none;
+  justify-content: center;
+  color: black;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+.navbar_button {
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(199, 246, 181);
+}
+.navbar_button:hover {
+  background-color: rgb(251, 207, 215);
+}
+.navbar_logo {
+  position: absolute;
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+  margin:5px;
+  border-radius: 50px;
+  z-index: -100;
+}
+.navbar_logo span {
+  position: absolute;
+  transform: translateX(7px) translateY(15px);
+}
+.custom_input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 80%;
+}
+.input {
+  font-size: 0.75em;
+  margin-top: 15px;
+  padding: 5px 10px;
+  width: 100%;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 0px #e2e2e2;
+  transition: 0.3s ease;
+}
+.input:focus {
+  background: #f2f2f2;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.input::placeholder {
+  color: #dddddd;
+}
+.svg_icon {
+  position: absolute;
+  left: 10px;
+  fill: gray;
+  width: 10px;
+  height: 15px;
+  margin-top: 13px;
+}
+.button {
+  width: 70px;
+  padding: 5px;
+  font-size: 0.75em;
+  align-items: center;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  border-color: #383528 20%;
+  margin-top: 15px;
+  box-shadow: 3px 3px 2px 0px #e2e2e2;
+}
+.button:hover {
+  background-color: pink;
+}
+.navbar_icons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    cursor: pointer;
+    width: 50px;
+    height: 55px;
+    z-index: 7;
+}
+.navbar_icon{
+    position: relative;
+    width: 30px;
+    height: 6px;
+    background-color: pink;
+    border-radius: 20px;
+}
+.navbar_icon::before, .navbar_icon::after{
+    content: "";
+    width: 30px;
+    height: 6px;
+    background-color: pink;
+    border-radius: 20px;
+}
+.navbar_icon::before{
+    position: absolute;
+    transform: translateY(-10px);
+}
+.navbar_icon::after{
+    position: absolute;
+    transform: translateY(10px);
+}
+.navbar_header.navbar_open{
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(smooth);
+}
