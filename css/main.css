@@ -208,3 +208,12 @@ body {
     opacity: 1;
     transition: var(smooth);
 }
+.open .navbar_icon{
+  background-color: transparent;
+}
+.open .navbar_icon::before{
+  transform: rotate(45deg);
+}
+.open .navbar_icon::after{
+  transform: rotate(-45deg);
+}
