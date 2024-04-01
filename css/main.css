@@ -6,11 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Sirin+Stencil", "Times New Roman", Times, serif;
+  font-family: "Pacifico", "Times New Roman", Times, serif;
 }
 .container {
   max-width: 1200px;
   width: 100%;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 :root {
   transition: all 0.5s ease-in-out smooth;
@@ -34,6 +39,7 @@ body {
   list-style: none;
   margin: 0px;
   padding: 10px;
+  cursor: pointer;
 }
 .navbar_link .menu_links {
   display: none;
@@ -74,7 +80,7 @@ body {
 }
 .navbar_link:hover .menu_links {
   opacity: 1;
-  -webkit-transform: translateY(-0px) translateX(0px);
+  -webkit-transform: translateY(0px) translateX(0px);
   -moz-transform: translateY(0px) translateX(0px);
   transform: translateY(0px) translateX(0px);
   -webkit-transition: all 0.5 ease-in-out;
@@ -97,39 +103,41 @@ body {
   font-size: 1em;
 }
 .navbar_button {
+  font-family: 'Pacifico';
   font-size: 1em;
-  margin: 10px;
-  padding: 10px;
+  margin: 0px;
+  padding: 0px;
   border-radius: 50px;
   border: none;
-  background-color: rgb(199, 246, 181);
-}
-.navbar_button:hover {
-  background-color: rgb(251, 207, 215);
+  background-color:transparent;
+  cursor: pointer;
+
 }
 .navbar_logo {
   position: absolute;
   background-color: pink;
   width: 50px;
   height: 50px;
-  margin:5px;
   border-radius: 50px;
   z-index: -100;
 }
 .navbar_logo span {
   position: absolute;
-  transform: translateX(7px) translateY(15px);
+  transform: translateX(7px) translateY(10px);
 }
 .custom_input {
   display: flex;
   align-items: center;
   position: relative;
   max-width: 80%;
+  margin-left: 10px;
 }
 .input {
+  font-family: 'Pacifico';
   font-size: 0.75em;
   margin-top: 15px;
-  padding: 5px 10px;
+  padding: 5px 25px;
+  left: 20px;
   width: 100%;
   outline: none;
   background: #ffffff;
@@ -148,14 +156,16 @@ body {
   color: #dddddd;
 }
 .svg_icon {
-  position: absolute;
-  left: 10px;
+  position:absolute;
+  left: 0px;
   fill: gray;
   width: 10px;
   height: 15px;
   margin-top: 13px;
+  padding-left: 10px;
 }
 .button {
+  font-family: 'Pacifico';
   width: 70px;
   padding: 5px;
   font-size: 0.75em;
@@ -235,6 +245,7 @@ body {
     width: 70px;
     height: 70px;
     z-index: 10;
+    margin: 5px;
   }
   .navbar_logo span{
     font-size: 1.5em;
@@ -263,7 +274,11 @@ body {
     font-size: 1.25em;
     margin-top: 0;
     border-radius: 20px;
-    padding-left: 30px;
+    padding-left: 40px;
+  }
+  .svg_icon{
+    width: 25px;
+    transform: translateX(-1px)translateY(-5px);
   }
   .button{
     width: 100px;
@@ -285,7 +300,7 @@ body {
     margin: 0px;
     padding: 0;
     justify-content: center;
-    align-items: center;
+    align-items: center;          
   }
   .navbar_link{
     border: none;
@@ -300,17 +315,34 @@ body {
     background-color: transparent;
     font-size: 1em;
   }
+  .navbar_button:hover{
+    color: pink;
+  }
   .navbar_link:hover .menu_links{
     position: absolute;
     background-color: transparent;
     border-radius: 20px;
   }
-  .navbar_link:hover .menu_links {
+  .navbar_link .menu_link{
     background-color: transparent;
+  }
+  .navbar_link > .menu_links {
+    text-align: left;
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar_link:hover .menu_links {
     opacity: 1;
-    -webkit-transform: translateY(-0px) translateX(0px);
+    -webkit-transform: translateY(0px) translateX(0px);
     -moz-transform: translateY(0px) translateX(0px);
-    transform: translateY(-10px) translateX(0px);
+    transform: translateY(0px) translateX(0px);
+    -webkit-transition: all 0.5 ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: -109;
   }
   .navbar_link:hover .menu_link{
