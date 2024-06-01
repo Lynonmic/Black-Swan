@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap"
       rel="stylesheet"
     />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
       span {
@@ -38,15 +39,12 @@
   <body>
     <!-- navbar -->
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary"
-      style="margin: 0; padding: 0; z-index: 100"
+      class="navbar fixed-top navbar-expand-xxl bg-body-tertiary"
+      style="margin: 0; padding: 0"
     >
-      <div
-        class="container-fluid"
-        style="background-color: var(--blue_v); height: 7vh"
-      >
+      <div class="container-fluid" style="background-color: var(--blue_v)">
         <img
-          src="img/download.jpg"
+          src="img/OIP.jpg"
           alt="the logo"
           style="
             width: 60px;
@@ -73,12 +71,14 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div style="width: 477px; height: 2vh"></div>
-          <ul class="nav justify-content-center">
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link"
                 aria-current="page"
                 href="index.html"
                 style="
@@ -97,67 +97,24 @@
                   color: black;
                   font-family: 'Pacifico', cursive;
                 "
-                href="#"
+                href="form.html"
                 >Đặt lịch</a
               >
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link"
                 style="
                   font-size: larger;
                   color: black;
                   font-family: 'Pacifico', cursive;
                 "
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                href="#footer"
+                >Liên lạc</a
               >
-                Sản phẩm
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    style="
-                      font-size: larger;
-                      color: black;
-                      font-family: 'Pacifico', cursive;
-                    "
-                    >Dụng cụ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    style="
-                      font-size: larger;
-                      color: black;
-                      font-family: 'Pacifico', cursive;
-                    "
-                    >Dung dịch khử khuẩn</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    style="
-                      font-size: larger;
-                      color: black;
-                      font-family: 'Pacifico', cursive;
-                    "
-                    >Thiết bị tự động</a
-                  >
-                </li>
-              </ul>
             </li>
           </ul>
-
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" style="margin: 10px 0">
             <input
               class="form-control me-2"
               type="search"
@@ -186,154 +143,180 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Thông tin đặt lịch</h1>
-      <form class="row g-3">
-        <div class="col-md-4">
-          <label for="validationDefault01" class="form-label">Họ:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationDefault01"
-            value="Mark"
-            required
-          />
+      <div style="margin: 100px 0">
+        <div style="margin: 20px 0">
+          <h1>Thông tin đặt lịch</h1>
         </div>
-        <div class="col-md-4">
-          <label for="validationDefault02" class="form-label">Tên</label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationDefault02"
-            value="Otto"
-            required
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="validationDefault01" class="form-label">Ngày sinh</label>
-          <input
-            type="date"
-            class="form-control"
-            id="validationDefault01"
-            value="Mark"
-            required
-          />
-        </div>
-
-        <div class="col-md-3">
-          <label for="validationDefault04" class="form-label"
-            >Chọn loại dịch vụ</label
-          >
-          <select class="form-select" id="validationDefault04" required>
-            <option selected disabled value="">...</option>
-            <option>Dọn dẹp theo diện tích</option>
-            <option>Phun khử khuẩn</option>
-            <option>Trông trẻ</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <label for="validationDefault03" class="form-label"
-            >Nhập diện tích cần dọn/phun</label
-          >
-          <input type="text" class="form-control" id="validationDefault03"  />
-        </div>
-        <div class="col-md-3">
-          <label for="validationDefault05" class="form-label"
-            >Nhập số lượng trẻ</label
-          >
-          <input type="text" class="form-control" id="validationDefault05" />
-        </div>
-        <div class="col-md-4">
-          <label for="validationDefault01" class="form-label">Ngày đặt</label>
-          <input
-            type="date"
-            class="form-control"
-            id="validationDefault01"
-            value="Mark"
-            required
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="validationDefault02" class="form-label">Giờ đặt</label>
-          <input
-            type="time"
-            class="form-control"
-            id="validationDefault02"
-            value="Otto"
-            required
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="validationDefaultUsername" class="form-label"
-            >Số giờ đặt</label
-          >
-          <div class="input-group">
-            <input type="text" class="form-control" id="validationDefault05" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationNumber" class="form-label"
-            >Phương thức thanh toán</label
-          >
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Chọn phương thức thanh toán</option>
-            <option value="1">Momo</option>
-            <option value="2">Ngân hàng</option>
-            <option value="3">Paypal</option>
-            <option value="4">Trả bằng tiền mặt</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Số điện thoại</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div class="form-floating">
-          <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
-            id="floatingTextarea2"
-            style="height: 100px"
-          ></textarea>
-          <label for="floatingTextarea2">Ghi chú </label>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Họ:</label>
             <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="invalidCheck2"
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              value="Mark"
               required
             />
-            <label class="form-check-label" for="invalidCheck2">
-              Đồng ý với các điều khoản và điều kiện của công ty
-            </label>
           </div>
-        </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Tên</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault02"
+              value="Otto"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label"
+              >Ngày sinh</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="validationDefault01"
+              value="Mark"
+              required
+            />
+          </div>
 
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Đặt</button>
-        </div>
-      </form>
+          <div class="col-md-6">
+            <label for="validationDefault04" class="form-label"
+              >Chọn loại dịch vụ</label
+            >
+            <select class="form-select" id="validationDefault04" required>
+              <option selected disabled value="">...</option>
+              <option value="option1">Dọn dẹp theo diện tích</option>
+              <option value="option2">Phun khử khuẩn</option>
+              <option value="option3">Trông trẻ</option>
+            </select>
+          </div>
+          <div class="col-md-6" id="input1">
+            <label for="validationDefault03" class="form-label"
+              >Nhập diện tích cần dọn/phun</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault03"
+              placeholder="200 m^2"
+              required
+            />
+          </div>
+          <div class="col-md-6" id="input2">
+            <label for="validationDefault05" class="form-label"
+              >Nhập số lượng trẻ</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault05"
+              placeholder="3 trẻ"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Ngày đặt</label>
+            <input
+              id="datepicker"
+              type="date"
+              class="form-control"
+              min="2024-06-01"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Giờ đặt</label>
+            <input
+              type="time"
+              class="form-control"
+              id="validationDefault02"
+              value="Otto"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label"
+              >Số giờ đặt</label
+            >
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefault05"
+                placeholder="1 tiếng"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationNumber" class="form-label"
+              >Phương thức thanh toán</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Chọn phương thức thanh toán</option>
+              <option value="1">Momo</option>
+              <option value="2">Ngân hàng</option>
+              <option value="3">Paypal</option>
+              <option value="4">Trả bằng tiền mặt</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Số điện thoại</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              required
+            />
+          </div>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 100px"
+            ></textarea>
+            <label for="floatingTextarea2">Ghi chú </label>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck2"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck2">
+                Đồng ý với các điều khoản và điều kiện của công ty
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Đặt</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <section id="footer" style="background-color: var(--light_pink_v);margin-top: 200px;">
+    <section
+      id="footer"
+      style="background-color: var(--light_pink_v); margin-top: 200px"
+    >
       <div class="container text-center">
         <div class="row" style="margin-top: 10px">
           <div class="col">
@@ -388,6 +371,41 @@
       </div>
     </section>
     <!-- javascript  -->
+    <script>
+      const datepickerInput = document.getElementById("datepicker");
+      const now = new Date();
+      const minDate = new Date("2024-06-01");
+
+      datepickerInput.min = minDate.toISOString().split("T")[0]; // Đặt ngày tối thiểu
+
+      datepickerInput.addEventListener("input", function () {
+        const selectedDate = new Date(this.value);
+        if (selectedDate < minDate) {
+          this.value = minDate.toISOString().split("T")[0];
+        }
+      });
+    </script>
+    <script>
+      const selected = document.getElementById("validationDefault04");
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+
+      input1.style.display = "none";
+      input2.style.display = "none";
+
+      selected.addEventListener("change", function () {
+        if (this.value === "option1") {
+          input1.style.display = "block";
+          input2.style.display = "none";
+        } else if (this.value === "option2") {
+          input1.style.display = "block";
+          input2.style.display ="none";
+        } else if (this.value === "option3") {
+          input2.style.display ="block";
+          input1.style.display ="none";
+        }
+      });
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
